@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coze页面</title>
+</head>
+<body>
+   <div id="app"></div>
+<script type="text/javascript">
+  var webSdkScript = document.createElement('script');
+  webSdkScript.src = 'https://lf-cdn.coze.cn/obj/unpkg/flow-platform/builder-web-sdk//dist/umd/index.js';
+  document.head.appendChild(webSdkScript);
+  webSdkScript.onload = function () {
+    new CozeWebSDK.AppWebSDK({
+      "token": "czu_q9VTE60P1sVEKDv8wL2SZguD6HUeCRiwLVotgXh36jG3hcsIkFCzZZBGpWP7J2dR3",
+      "appId": "7590998932109525043",
+      "container": "#app",
+      "userInfo": {
+        "id": "test_user_001",
+        "url": "",
+        "nickname": "User"
+      }
+    });
+  }
+</script>
+</body>
+</html>
